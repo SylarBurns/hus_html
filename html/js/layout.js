@@ -106,3 +106,32 @@ $(document).ready(function() {
         return false;
     });
 });
+
+$(function () {
+    $('#sideMenu').each(function () {
+
+        var $window = $(window), 
+            $header = $(this), 
+            headerOffsetTop = $header.offset().top;
+
+        $window.on('scroll', function () {
+            if ($window.scrollTop() > headerOffsetTop) {
+                $header.addClass('sticky');
+            } else {
+                $header.removeClass('sticky');
+            }
+        });
+        $window.trigger('scroll');
+
+    });
+});
+
+$(document).ready(function() {
+    $("submenu").hide();
+    $("ul.sideGnb ul:first").show()
+    $("ul.sideGnb li").click(function() {
+        var activeTab = $(this).find("a").attr("href");
+        $(activeTab).toggle();
+        return false;
+    });
+});

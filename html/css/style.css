@@ -3,8 +3,8 @@ input[type=text],
 input[type=password],
 textarea
 {
-    -webkit-box-sizing :border-box;‌​
-    -moz-box-sizing :border-box;
+    -webkit-box-sizing :border-box;
+    -moz-box-sizing:border-box;
     box-sizing :border-box;
 }
 * { position:relative; transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s; -webkit-transition-timing-function:cubic-bezier(0.7, 0, 0.3, 1); transition-timing-function:cubic-bezier(0.7, 0, 0.3, 1); word-break:keep-all; }
@@ -43,7 +43,7 @@ textarea
 
 #hsearch{position:absolute; top:54px; right: 0;}
 #hsearch input[type="text"]{width: 223px; height: 21px; background-color: #fff; border: 1px solid #78d2ff; padding: 0 5px;}
-#hsearch input[type="submit"]{width: 21px; height: 21px; background-color: #78d2ff; border:0; background-image: url('images/search.png'); 
+#hsearch input[type="submit"]{width: 21px; height: 21px; background-color: #78d2ff; border:0; background-image: url('../images/search.png'); 
                               background-repeat:no-repeat; background-size:80% 80%; border:none; background-position: center}
 #bt_search{display:none}
 
@@ -69,7 +69,7 @@ textarea
 #section_3 .wrap{height: 555px; padding-top:8px;}
 
 #banner_1, #bestFive, #market, #extra{width:745px; float:left; margin-right:266px; border:1px solid #ccc; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16); left:0; }
-#login, #hnews, #banner_2, #lostAndFound{width:247px; position:absolute; right:0; border:1px solid #ccc; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);}
+#login, #hnews, #banner_2, #lostAndFound, #loginComplete{width:247px; position:absolute; right:0; border:1px solid #ccc; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);}
 
 #banner_1{height:96px;}
 #login{height:96px;}
@@ -77,6 +77,21 @@ textarea
 #login .password{position:absolute; width:160px; height:28px; left:18px; right:80px; top:55px; border:1px solid #dddcdc; padding: 5px;}
 #login .submit{position:absolute; width:52px; height:69px; top: 15px; right:20px;}
 
+#loginComplete{height:96px;}
+#loginComplete .profileImage{position:absolute; top:14px; left:14px;}
+#loginComplete .profileImage img{width:42px; height:42px;}
+#loginComplete .userName{line-height: 1.5; position:absolute; top:23px; left:70px; font-family: KoPubDotum; font-size: 14px; color:#5e5e5e}
+#loginComplete .logout{text-align: center; padding:3px; border:1px solid #ededed; background-color: #ffffff; position: absolute; top: 23px; right: 15px; width:48px; height: 18px; }
+#loginComplete .logout a{ text-decoration:none; color: #5e5e5e; font-family: KoPubDotum;font-size: 12px; }
+#loginComplete .bottom {position:absolute; height:28px; width:245px; bottom:0; left:0; border:1px solid #ededed; background-color: #fbfbfb }
+#loginComplete .bottom .notice{width:87px; height:28px; border-right:1px solid #ededed; float:left; text-align: center; color: #5e5e5e;}
+#loginComplete .bottom .notice button{border:none; background-color: #fbfbfb; top:6px}
+#loginComplete .bottom .notice:hover .notice{background-color: #ffffff}
+.noticeContent{display:none; height: 198.5px; width:204px; top:28px; position: absolute; z-index: 1; box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); background-color: #ffffff; border-bottom: 1px solid #ededed; border-left: 1px solid #ededed ;border-right: 1px solid #ededed ;padding:26px 20px 0} 
+.noticeContent a{display: block }
+.notice:hover .noticeContent {display: block;}
+#loginComplete .bottom .mypage{width:87px; height:28px; border-right:1px solid #ededed; float:left; text-align: center;}
+#loginComplete .bottom .mypage a{text-decoration: none; top:6px; font-family: KoPubDotum; font-size: 12px; color: #5e5e5e;}
 #bestFive{height: 264px; }
 #hnews{height:192px;}
 #banner_2{ height:64px; top: 208px}
@@ -188,3 +203,16 @@ ul.lostAndFound_info li.active a:after {content:""; display: block; width:100%; 
 
 ul.bestFive_info li a {margin-right:10px; }
 }
+
+#contents_block {margin-top:8px;}
+#contents_block .wrap{max-width:1000px; height:2000px; margin:auto; box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); border:1px solid #e1e1e1 }
+#sideMenu{width:160px;height:500px;float:left;border:none;margin: 30px 15px 30px 30px;padding: 10px;position:absolute;}
+#sideMenu.sticky {position: fixed;top: -15px;margin: 30px 15px 30px 30px;}
+#sideGnb{border:.5px solid #c2c2c2; border-radius: 10px; top:0; left:0; width:160px; height: auto; opacity: 0.78;box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); }
+#sideGnb ul li{ font-family: KoPubDotum;font-size: 14px; line-height: 2.08; color: #202020; font-weight: bold; text-align: left; left: 16px;}
+#sideGnb ul li a{ font-family: KoPubDotum;font-size: 12px; line-height: 2.08; color: #202020; font-weight: bold; text-align: left; left: 16px;}
+#sideGnb ul ul{display:none}
+#sideGnb ul ul li a{font-family: KoPubDotum;font-size: 12px; line-height: 2.08; color: #5e5e5e; text-align: left;}
+#sideGnb ul ul li:before{content:">"}
+#sideGnb hr{display:block; margin-top:5px; margin-bottom:5px; border-top:.5px solid#c2c2c2;}
+#mainContents_block .wrap{width: 660px; height:1800px; margin:30px 109px 30px 15px; border:none; box-shadow:none; float:right}
