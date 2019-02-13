@@ -8,6 +8,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/layout.js"></script>
 <style type="text/css">
+#voteBox{width:100%; margin-left:5px;}
+#for, #neutral, #against{width:64px; height:35px; margin-right:5px; text-indent:-9999px}
+#for{background: url( "images/for2.png" ) no-repeat;background-size:100% 100%;border: none; }
+#for.voted{background: url( "images/for.png" ) no-repeat;background-size:100% 100%;border: none; }
+#neutral{background: url( "images/neutral2.png" ) no-repeat;background-size:100% 100%;border: none;}
+#neutral.voted{background: url( "images/neutral.png" ) no-repeat;background-size:100% 100%;border: none;}
+#against{background: url( "images/against2.png" ) no-repeat;background-size:100% 100%;border: none;}
+#against.voted{background: url( "images/against.png" ) no-repeat;background-size:100% 100%;border: none;}
 </style>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
@@ -126,8 +134,8 @@
                     {% endblock%} -->
                     <!--mainContents-->
                     <div id="mainContents">
-                        <div id="boardName">천마지</div><br>
-                        <div id="introduction">사랑을 속삭이는 정원 천마지입니다</div><br>
+                        <div id="boardName">활주로</div><br>
+                        <div id="introduction">구체적이며 치열한 소통을 하는 토론게시판 입니다</div><br>
                         <div id="title_block">
                             <span id="title">제목입니다</span>
                             <div>
@@ -150,6 +158,11 @@
                             <span id="dislikecount">1234</span>
                             </div>
                             <button><a href="{% url 'heart:writeReport' object.pk %}"><img src="images/답글 신고-22.png" width="35px" height="35px"></a></button>
+                        </div>
+                        <div class="voteBox">
+                            <input type="button" id= "for" class="vote" name="{{ object.pk }}" value="찬성">
+                            <input type="button" id= "neutral" class="vote" name="{{ object.pk }}" value="중립">
+                            <input type="button" id= "against" class="vote" name="{{ object.pk }}" value="반대">
                         </div>
                         <div class="commentWriter">
                             <form id="commentForm"><!--댓글-->

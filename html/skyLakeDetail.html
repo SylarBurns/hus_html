@@ -141,12 +141,12 @@
                             내용들어감
                         </div>
                         <div class="buttons">
-                            <div id="like_block">
-                            <input type="button" class="like" name="{{ object.pk }}">
+                            <div id="love_block">
+                            <input type="button" class="like" id="love" name="{{ object.pk }}">
                             <span id="likecount">1234</span>
                             </div>
                             <div id="dislike_block">
-                            <input type="button" class="dislike" name="{{ object.pk }}">
+                            <input type="button" class="dislike" id="noLove" name="{{ object.pk }}">
                             <span id="dislikecount">1234</span>
                             </div>
                             <button><a href="{% url 'heart:writeReport' object.pk %}"><img src="images/답글 신고-22.png" width="35px" height="35px"></a></button>

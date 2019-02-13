@@ -140,7 +140,7 @@ ul.lostAndFound_info li.active a:after {content:""; display: block; width:100%; 
 .lostAndFound_info_content.on { display:block;}
 #lostAndFound hr{display:block; margin-top:16px; border-top: 1px solid#ededed; background-color: #ffffff;}
 
-@media screen and (max-width:1000px) {
+/* @media screen and (max-width:1000px) {
 #header{border-bottom: 1px solid #ddd; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1)}
 #header .wrap {height:60px; padding-top: 0;}
 #header .wrap h1 {top:15px; left:15px;}
@@ -202,7 +202,7 @@ ul.lostAndFound_info li.active a:after {content:""; display: block; width:100%; 
 #main_contents>.wrap{height: 1430px;}
 
 ul.bestFive_info li a {margin-right:10px; }
-}
+} */
 
 #contents_block {margin-top:8px;}
 #contents_block .wrap{max-width:1000px; height:2000px; margin:auto; box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); border:1px solid #e1e1e1 }
@@ -215,4 +215,100 @@ ul.bestFive_info li a {margin-right:10px; }
 #sideGnb ul ul li a{font-family: KoPubDotum;font-size: 12px; line-height: 2.08; color: #5e5e5e; text-align: left;}
 #sideGnb ul ul li:before{content:">"}
 #sideGnb hr{display:block; margin-top:5px; margin-bottom:5px; border-top:.5px solid#c2c2c2;}
-#mainContents_block .wrap{width: auto; height:1800px; margin:30px 0 30px 230px; border:none; box-shadow:none; float:right}
+#mainContents_block .wrap{width: 770px; height:1800px; margin:30px 0 30px 230px; border:none; box-shadow:none; float:right}
+
+
+#comments{ width: auto; margin-top: 40px;}
+#comments #commentCount{ width:auto; *zoom:1;}
+#comments #commentCount span{ font-size: 14px;line-height: 1.5;color: #5e5e5e;}
+#comments #commentCount #count{font-size: 20px;line-height: 1.05;color: #78d2ff;}
+#comments #commentCount:after{content:''; clear:both; display:block; height:0; visibility:hidden; }
+#comments .commentBlock{background-color: #fff; width:750px; min-height:131px; float:right; margin-right: 15px;}
+#comments .commentBlock img{ width: 15px; height: 15px; left:0; margin-top: 18px;}
+#comments .commentBlock div{border: 1px solid #cbcbcb; border-radius: 10px; width:730px; height:131px; float:right; margin:18px 0 0 0;}
+#comments .commentBlock div .commentWriterName {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .commentBlock div .commentPubDate {margin-left:9px;font-size: 10px; color: #b5b5b5; line-height: 2.5;}
+#comments .commentBlock div .commentContent {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .commentBlock div .likeCount, .dislikeCount, .commentLike, .commentDislike{float:right;}
+input.commentLike {background: url( "../images/like.png" ) no-repeat;background-size:80% 80%;border: none;width: 18px;height: 18px;padding:0;cursor: pointer;}
+input.commentDislike {background: url( "../images/dislike.png" ) no-repeat;background-size:80% 80%;border: none;width: 18px;height: 18px;padding:0;cursor: pointer;}
+#comments .commentBlock div .subComment{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none; background-color: #fff;margin-left:17.5px;}
+#comments .commentBlock div .subComment:before{content:'';background:url('../images/subcomment.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+#comments .commentBlock div .report{border:none; background-color: #fff;}
+#comments .commentBlock div .report a{font-size: 9px;color: #b5b5b5;line-height: 3.13;}
+#comments .commentBlock div .report a:hover{text-decoration: none}
+#comments .commentBlock div .report:before{content:'';background:url('../images/답글 신고-22.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+#comments .subCommentWrite{border: 1px solid #cbcbcb; border-radius: 10px;display:block; width:707px; height:131px; float:right;  margin:5px 15px 0 0;}
+#comments .subCommentWrite input[type="textarea"]{margin: 5px 5px 0 5px; width: 690px; min-height: 90px;border: 1px solid #cbcbcb;border-radius: 10px;}
+#comments .subCommentWrite input[type="radio"]{ width: 9px; height: 9px; vertical-align: middle; margin-left:5px;}
+#comments .subCommentWrite label{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none;}
+#comments .subCommentWrite input[type="submit"]{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none; background-color: #fff; cursor: pointer;}
+#comments .subCommentBlock{width:727px; min-height:131px; float:right; margin-right: 15px;} 
+#comments .subCommentBlock div{border: 1px solid #cbcbcb; border-radius: 10px; width:707px; height:131px; float:right;  margin:18px 0 0 0;}
+#comments .subCommentBlock img { width: 15px; height: 15px; left:0; margin-top: 18px;}
+#comments .subCommentBlock div .commentWriterName {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .subCommentBlock div .commentPubDate {margin-left:9px;font-size: 10px; color: #b5b5b5; line-height: 2.5;}
+#comments .subCommentBlock div .commentContent {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .subCommentBlock div .likeCount, .dislikeCount, .commentLike, .commentDislike{float:right;}
+#comments .subCommentBlock div .report{border:none; background-color: #fff;margin-left:17.5px;}
+#comments .subCommentBlock div .report a{font-size: 9px;color: #b5b5b5;line-height: 3.13;}
+#comments .subCommentBlock div .report a:hover{text-decoration: none}
+#comments .subCommentBlock div .report:before{content:'';background:url('../images/답글 신고-22.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+
+
+#searchBox{position:absolute; right:263px; bottom: 91.5px; width:330px; height: 21px; }
+#searchBox select{width:70px; height:21px; margin:0 8px 0 0; border: 1px solid #ededed}
+#searchBox select option{text-align: center; font-size: 10px; line-height: 2.5;}
+#searchBox input[type="text"]{width:188px; height: 21px; border:1px solid #ededed; background-color: #ffffff; margin:0; display: inline}
+#searchBox input[type="submit"]{width:29px; height: 21px; background-color: #ededed; margin:0; background-image: url('images/search.png'); 
+                              background-repeat:no-repeat; background-size:14px 14px; border:none; background-position: center; cursor: pointer;}
+#pageNation{position:absolute; right:268px; bottom: 126.5px; width:350px; height: 21px; background-color: #aaaaaa}
+
+#boardName{font-size:20px; line-height: 1.75; color: #5e5e5e;text-align: left;}
+#introduction{  font-size: 16px; color: #5e5e5e;line-height: 1.56;}
+#list>table{width:100%; border-collapse:collapse; border:none}
+#list>table>thead>tr{height:42px; background-color: #fbfbfb; border-top:2px solid #ededed; border-bottom: 2px solid #ededed;}
+#list>table>tbody>tr{height:42px; background-color: #fff; border-bottom: 1px solid #ededed;}
+#list>table>tbody>tr>td{text-align: center;}
+
+#potatoFieldList>thead>tr .number{width:5%}
+#potatoFieldList>thead>tr .writer, .hitCount, .pubDate{width:15%}
+
+#skyLakeList>thead>tr .number{width:5%}
+#skyLakeList>thead>tr .writer, .hitCount, .pubDate{width:15%}
+
+#bambooList>thead>tr .number{width:5%}
+#bambooList>thead>tr .writer, .hitCount, .pubDate{width:15%}
+
+#runwayList>thead>tr .number{width:5%}
+#runwayList>thead>tr .writer, .hitCount, .pubDate, .type{width:10%}
+
+
+#title_block{width:100%; height:64.6px;  background-color: #fbfbfb; border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1}
+#title_block>#title{ font-size: 16px;font-weight: bold;line-height: 1.31;text-align: left;color: #4c4c4c; margin:10px 0 13px 15px; position: absolute; top:0}
+#title_block>div {margin-bottom:5px; position:absolute; width:100%; bottom:0;}
+#title_block>div>#profileImage{display: inline; margin-left:15px;}
+#title_block>div>#profileImage img{ width: 12px; height: 12px; vertical-align: middle}
+#title_block>div>#writerName{ font-size: 11px; line-height: 2.27;  color: #5e5e5e;display: inline;}
+#title_block>div>#hitCount{font-size: 11px; line-height: 2.27;  color: #5e5e5e;display: inline-block; margin-left: 30px;}
+#title_block>div>#pubDate{font-size: 11px; line-height: 2.27;  color: #5e5e5e; float:right; margin-right:5px;}
+.buttons{height:50px}
+.buttons button{border:none; background-color: #fff; padding-bottom: 3px;}
+#content{padding: 5px; margin:40px 20px 20px 20px;}
+#like_block{border: 1px solid #78d2ff;border-radius: 5px; width:64px; height:23px; margin: 0 16px 0 0; padding: 5px; display: inline-block;}
+#love_block{border: 1px solid #ff789a;border-radius: 5px; width:64px; height:23px; margin: 0 16px 0 0; padding: 5px; display: inline-block;}
+#dislike_block{border: 1px solid #b5b5b5;border-radius: 5px; width:64px; height:23px; margin: 0 16px 0 0; padding: 5px; display: inline-block;}
+input#love {background: url( "../images/아이콘_대지 1 사본 3.png" ) no-repeat;background-size:80% 80%;border: none;width: 25px;height: 26px;padding:0;cursor: pointer;}
+input#noLove {background: url( "../images/아이콘_대지 1 사본 5.png" ) no-repeat;background-size:80% 80%;border: none;width: 25px;height: 26px;padding:0;cursor: pointer;}
+input.like {background: url( "../images/like.png" ) no-repeat;background-size:80% 80%;border: none;width: 25px;height: 26px;padding:0;cursor: pointer;}
+input.dislike {background: url( "../images/dislike.png" ) no-repeat;background-size:80% 80%;border: none;width: 25px;height: 26px;padding:0;cursor: pointer;}
+input::placeholder {color: #cbcbcb}
+input::-webkit-input-placeholder{color: #cbcbcb}
+input:-ms-input-placeholder{color: #cbcbcb}
+.commentWriter{width:100%; margin: 40px 0 0 0; }
+#commentForm input[type="textarea"]{ width: 695px; min-height: 31px;border: 1px solid #cbcbcb; display: inline-block; padding-left: 5px;} 
+#commentForm input[type="submit"]{width: 50px;height: 35px;padding:0;cursor: pointer; border:none; background: url( "../images/글쓰기_대지 1 사본 18.png" ) no-repeat;background-size:80% 80%;background-color: #78d2ff;background-position: center;}
+
+
+
+
