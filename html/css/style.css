@@ -215,4 +215,4 @@ ul.bestFive_info li a {margin-right:10px; }
 #sideGnb ul ul li a{font-family: KoPubDotum;font-size: 12px; line-height: 2.08; color: #5e5e5e; text-align: left;}
 #sideGnb ul ul li:before{content:">"}
 #sideGnb hr{display:block; margin-top:5px; margin-bottom:5px; border-top:.5px solid#c2c2c2;}
-#mainContents_block .wrap{width: 660px; height:1800px; margin:30px 109px 30px 15px; border:none; box-shadow:none; float:right}
+#mainContents_block .wrap{width: auto; height:1800px; margin:30px 0 30px 230px; border:none; box-shadow:none; float:right}

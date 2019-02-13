@@ -8,6 +8,43 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/layout.js"></script>
 <style type="text/css">
+#comments{ width: auto; margin-top: 40px;}
+#comments #commentCount{ width:auto; *zoom:1;}
+#comments #commentCount span{ font-size: 14px;line-height: 1.5;color: #5e5e5e;}
+#comments #commentCount #count{font-size: 20px;line-height: 1.05;color: #78d2ff;}
+#comments #commentCount:after{content:''; clear:both; display:block; height:0; visibility:hidden; }
+#comments .commentBlock{background-color: #fff; width:750px; min-height:131px; float:right; margin-right: 15px;}
+#comments .commentBlock img{ width: 15px; height: 15px; left:0; margin-top: 18px;}
+#comments .commentBlock div{border: 1px solid #cbcbcb; border-radius: 10px; width:730px; height:131px; float:right; margin:18px 0 0 0;}
+#comments .commentBlock div .commentWriterName {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .commentBlock div .commentPubDate {margin-left:9px;font-size: 10px; color: #b5b5b5; line-height: 2.5;}
+#comments .commentBlock div .commentContent {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .commentBlock div .likeCount, .dislikeCount, .commentLike, .commentDislike{float:right;}
+input.commentLike {background: url( "images/like.png" ) no-repeat;background-size:80% 80%;border: none;width: 18px;height: 18px;padding:0;cursor: pointer;}
+input.commentDislike {background: url( "images/dislike.png" ) no-repeat;background-size:80% 80%;border: none;width: 18px;height: 18px;padding:0;cursor: pointer;}
+#comments .commentBlock div .subComment{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none; background-color: #fff;margin-left:17.5px;}
+#comments .commentBlock div .subComment:before{content:'';background:url('images/subcomment.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+#comments .commentBlock div .report{border:none; background-color: #fff;}
+#comments .commentBlock div .report a{font-size: 9px;color: #b5b5b5;line-height: 3.13;}
+#comments .commentBlock div .report a:hover{text-decoration: none}
+#comments .commentBlock div .report:before{content:'';background:url('images/subcomment.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+#comments .subCommentWrite{border: 1px solid #cbcbcb; border-radius: 10px;display:block; width:707px; height:131px; float:right;  margin:5px 15px 18px 0;}
+#comments .subCommentWrite input[type="textarea"]{margin: 5px 5px 0 5px; width: 690px; min-height: 90px;border: 1px solid #cbcbcb;border-radius: 10px;}
+#comments .subCommentWrite input[type="radio"]{ width: 9px; height: 9px; vertical-align: middle; margin-left:5px;}
+#comments .subCommentWrite label{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none;}
+#comments .subCommentWrite input[type="submit"]{font-size: 9px;color: #b5b5b5;line-height: 3.13; border:none; background-color: #fff; cursor: pointer;}
+#comments .subCommentBlock{width:727px; min-height:131px; float:right; margin-right: 15px;} 
+#comments .subCommentBlock div{border: 1px solid #cbcbcb; border-radius: 10px; width:707px; height:131px; float:right;  margin:18px 0 0 0;}
+#comments .subCommentBlock img { width: 15px; height: 15px; left:0; margin-top: 18px;}
+#comments .subCommentBlock div .commentWriterName {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .subCommentBlock div .commentPubDate {margin-left:9px;font-size: 10px; color: #b5b5b5; line-height: 2.5;}
+#comments .subCommentBlock div .commentContent {margin-left:17.5px;font-size: 11px; color: #5e5e5e; line-height: 2.27;}
+#comments .subCommentBlock div .likeCount, .dislikeCount, .commentLike, .commentDislike{float:right;}
+#comments .subCommentBlock div .report{border:none; background-color: #fff;margin-left:17.5px;}
+#comments .subCommentBlock div .report a{font-size: 9px;color: #b5b5b5;line-height: 3.13;}
+#comments .subCommentBlock div .report a:hover{text-decoration: none}
+#comments .subCommentBlock div .report:before{content:'';background:url('images/subcomment.png');background-size:100% 100%;width: 9px; height:9px;display:inline-block}
+
 </style>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
@@ -124,6 +161,45 @@
                 <div class="wrap">
                     {% block content%}
                     {% endblock%}
+                    <!--comments-->
+                    <div id="comments">
+                        <div id="commentCount">
+                            <span id="count">60</span><span>개의 댓글</span><br>
+                        </div>
+                        <div class="commentBlock">
+                            <span><img src="images/프로필_대지 1 사본 17_대지 1 사본 17.png"></span>
+                            <div>
+                                <span class="commentWriterName">이승윤</span><span class="commentPubDate">2019-02-13</span><br>
+                                <span class="commentContent">댓글 테스트입니다.</span>
+                                <span class="dislikeCount">1234&nbsp; </span><input type="button" class="commentDislike" name="{{ comment.pk }}">
+                                <span class="likeCount">1234&nbsp; </span><input type="button" class="commentLike" name="{{ comment.pk }}"><br>
+                                <button class="subComment" name='{{comment.pk}}'>&nbsp; 답글</button>
+                                <button class="report"><a href="{% url 'heart:writeCommentReport' comment.pk %}">&nbsp; 신고</a></button>
+                            </div>
+                        </div>
+                        <div class="subCommentWrite" id="subCommentWrite_{{comment.pk}}">
+                            <form>
+                                <input type="textarea" name='subCommentContent'>
+                                <input type="radio" name="annonimity" id="annoFalse" value="False"checked>
+                                <label for="annoFalse">실명(닉네임)</label>
+                                <input type="radio" name="annonimity" id="annoTrue" value="True">
+                                <label for="annoTrue">익명</label>
+                                <input type="submit" class="subCommentSubmit" value="댓글 달기">
+                                <input type="number" name="commentPk" value="{{comment.pk}}" style="display: none">
+                            </form>
+                        </div>
+                        <div class="subCommentBlock">
+                            <span><img src="images/프로필_대지 1 사본 17_대지 1 사본 17.png"></span>
+                            <div>
+                                <span class="commentWriterName">이승윤</span><span class="commentPubDate">2019-02-13</span><br>
+                                <span class="commentContent">대댓글 테스트입니다.</span>
+                                <span class="dislikeCount">1234&nbsp; </span><input type="button" class="commentDislike" name="{{ subComment.pk }}">
+                                <span class="likeCount">1234&nbsp; </span><input type="button" class="commentLike" name="{{ subComment.pk }}"><br>
+                                <button class="report"><a href="{% url 'heart:writeCommentReport' subComment.pk %}">신고</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//comments-->
                 </div>
                 <!--//wrap--> 
             </div>
