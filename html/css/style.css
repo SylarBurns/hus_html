@@ -38,7 +38,7 @@ textarea
 * {position:relative; }
 
 #header {z-index:10; }
-#header .wrap {margin:0 auto; max-width: 1000px; height:168px; padding-top: 128px;}
+#header .wrap {margin:0 auto; width: 1000px; height:168px; padding-top: 128px;}
 #header .wrap h1 { position:absolute; top:39px; left:0; }
 
 #hsearch{position:absolute; top:54px; right: 0;}
@@ -47,7 +47,7 @@ textarea
                               background-repeat:no-repeat; background-size:80% 80%; border:none; background-position: center}
 #bt_search{display:none}
 
-#gnb {border:1px solid #ccc; border-top:3px solid #78d2ff; max-width: 1000px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);}
+#gnb {border:1px solid #ccc; border-top:3px solid #78d2ff; width: 1000px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16);}
 #gnb>ul  { *zoom:1; padding:17px 0; }
 #gnb>ul:after {content:''; clear:both; display:block; height:0; visibility:hidden; }
 #gnb>ul>li {float:left; width:25%; height: 134px; line-height: 27px; font-weight: 500;}
@@ -205,7 +205,7 @@ ul.bestFive_info li a {margin-right:10px; }
 } */
 
 #contents_block {margin-top:8px;}
-#contents_block .wrap{max-width:1000px; height:2000px; margin:auto; box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); border:1px solid #e1e1e1 }
+#contents_block .wrap{width:1000px; height:2000px; margin:auto; box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); border:1px solid #e1e1e1 }
 #sideMenu{width:160px;height:500px;float:left;border:none;margin: 30px 15px 30px 30px;padding: 10px;position:absolute;}
 #sideMenu.sticky {position: fixed;top: -15px;margin: 30px 15px 30px 30px;}
 #sideGnb{border:.5px solid #c2c2c2; border-radius: 10px; top:0; left:0; width:160px; height: auto; opacity: 0.78;box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.3); }
@@ -217,6 +217,8 @@ ul.bestFive_info li a {margin-right:10px; }
 #sideGnb hr{display:block; margin-top:5px; margin-bottom:5px; border-top:.5px solid#c2c2c2;}
 #mainContents_block .wrap{width: 770px; height:1800px; margin:30px 0 30px 230px; border:none; box-shadow:none; float:right}
 
+.sideMenuBottomIcons {margin-left:12px;}
+.sideMenuBottomIcons img{width:35px; height: 33.2px; margin: 10px 10px 0 0 }
 
 #comments{ width: auto; margin-top: 40px;}
 #comments #commentCount{ width:auto; *zoom:1;}
@@ -310,5 +312,14 @@ input:-ms-input-placeholder{color: #cbcbcb}
 #commentForm input[type="submit"]{width: 50px;height: 35px;padding:0;cursor: pointer; border:none; background: url( "../images/글쓰기_대지 1 사본 18.png" ) no-repeat;background-size:80% 80%;background-color: #78d2ff;background-position: center;}
 
 
-
+#voteBox{width:100%; margin-left:5px;}
+#for, #neutral, #against{width:64px; height:35px; margin-right:5px; text-indent:-9999px}
+#for{background: url( "images/for2.png" ) no-repeat;background-size:100% 100%;border: none; }
+#for.voted{background: url( "images/for.png" ) no-repeat;background-size:100% 100%;border: none; }
+#neutral{background: url( "images/neutral2.png" ) no-repeat;background-size:100% 100%;border: none;}
+#neutral.voted{background: url( "images/neutral.png" ) no-repeat;background-size:100% 100%;border: none;}
+#against{background: url( "images/against2.png" ) no-repeat;background-size:100% 100%;border: none;}
+#against.voted{background: url( "images/against.png" ) no-repeat;background-size:100% 100%;border: none;}
+#commentForm input[type="radio"]{float:right; vertical-align: middle; width: 11px; }
+#commentForm label{float:right; margin: 0 14px 5px 3px; font-size: 11px;color: #b5b5b5;}
 

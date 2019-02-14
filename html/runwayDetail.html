@@ -8,14 +8,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/layout.js"></script>
 <style type="text/css">
-#voteBox{width:100%; margin-left:5px;}
-#for, #neutral, #against{width:64px; height:35px; margin-right:5px; text-indent:-9999px}
-#for{background: url( "images/for2.png" ) no-repeat;background-size:100% 100%;border: none; }
-#for.voted{background: url( "images/for.png" ) no-repeat;background-size:100% 100%;border: none; }
-#neutral{background: url( "images/neutral2.png" ) no-repeat;background-size:100% 100%;border: none;}
-#neutral.voted{background: url( "images/neutral.png" ) no-repeat;background-size:100% 100%;border: none;}
-#against{background: url( "images/against2.png" ) no-repeat;background-size:100% 100%;border: none;}
-#against.voted{background: url( "images/against.png" ) no-repeat;background-size:100% 100%;border: none;}
+
 </style>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
@@ -167,11 +160,15 @@
                         <div class="commentWriter">
                             <form id="commentForm"><!--댓글-->
                                 <!-- {% csrf_token %} -->
+                                <label for="annoTrue">익명</label>
+                                <input type="radio" name="annonimity" id="annoTrue" value="True">
+                                <label for="annoFalse">실명(닉네임)</label>
+                                <input type="radio" name="annonimity" id="annoFalse" value="False" checked>
+
+
                                 <input type="textarea" name="content" placeholder="댓글을 입력하세요">
                                 <input type="number" name="pk" value="{{object.pk}}" style="display:none">
-                                <input type="radio" name="annonimity" value="True" style="display:none">
-                                <input type="radio" name="annonimity" value="False" style="display:none" checked>
-                                <input type="submit" value="">
+                                <input type="submit" value=" ">
                             </form>
                         </div>
                     </div>
